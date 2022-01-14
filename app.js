@@ -49,6 +49,7 @@ app.post("/work", (req, res) => {
   res.redirect("/work");
 })
 
-app.listen(port, () => {
+// setting up local and heroku servers
+app.listen(process.env.PORT || port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
